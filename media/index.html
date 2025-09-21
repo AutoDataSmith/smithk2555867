@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Midler's Lake House Bed & Breakfast Retreat</title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve an incredible Bed & Breakfast Experience including unsurpased amenities">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="media-apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="media-favicon-32x32.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="media-favicon-16x16.jpg">
+
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #ffffff; color: #000; font-family: Verdana,Arial,sans-serif; }
+
+        /* general reset of browser default values */
+        body, header, nav, main, footer, section, ul, li{margin:0;padding:0;}
+        a {text-decoration:none;}
+        a:hover, .btn:hover{text-decoration: underline;}
+        ul{list-style-type: none;}
+        ul.bulleted {list-style-type:circle;margin-left:20px;}
+        p{ margin:0;}
+        header nav{ border-bottom: 1px solid #000; height: 50px;} 
+        header nav { display: flex; flex-wrap: wrap; justify-content:space-evenly; align-items: center;}
+        header nav div{  display: block; border:  1px solid #000; padding:5px;}
+        header .hero {background-repeat: no-repeat; background-size: cover; height: 150px; text-align: center; padding-top:20px;}
+        #Home_pg .hero { background-image: url(placeholder_view_vector.svg);}        
+        
+
+        .grid-container-2 {
+            display: grid;    
+            grid-template-columns: auto 50%;
+        }
+
+
+        .section-placeholder { text-align: center; margin :20px 0;}
+        .section-placeholder h2 { text-align: center; border:1px solid #000; padding:5px; margin:0;}
+        .content-placeholder {height:100px; border:  1px solid #000;padding:5px;}
+
+        footer .main{ border-top: 1px solid #000;padding:5px;}   
+        footer .main ul li { padding:5px;}  
+
+        footer .social{ border-top: 1px solid #000;padding:5px;}
+        footer nav.bottom{ border-top: 1px solid #000;padding:5px; text-align: center;}
+        
+        footer div.social ul { display:flex; flex-wrap: nowrap; justify-content:space-evenly; align-items: center;}
+        footer div.social ul li {border: 1px solid #000;padding:5px;}
+        img{margin:0;}
+        .grid-img { background-image: url(placeholder_view_vector.svg); background-size: contain; } 
+
+
+        @media (min-width: 768px){ /*  medium devices  - tablets, laptops, small desktops */              
+           
+            footer div.main{ display:flex; flex-flow: row nowrap; justify-content:space-around; padding:10px 0; } 
+            footer div.main ul{border-bottom: 0;}
+            
+       
+        }
+
+        @media (min-width: 1200px){ /*   Desktops */    
+
+            .content-container{ width:80%; margin:auto;}
+            .content-container img{ border-radius: 20px;}
+            .hero .content-container{ margin: 20px auto; }
+            
+            footer div.main{padding:20px 0;}
+            footer div{margin-bottom: 20px;}
+
+            .grid-container-2 {
+                display: grid;    
+                grid-template-columns: auto 60%;
+            }
+
+
+
+
+        }
+
+    </style>
+
+
+</head>
+<body id="Home_pg">
+   
+    <header>
+        
+        <nav>
+            <div class="logo">LOGO </div>
+            <div>CALL</div>          
+            <div>SERVICES</div>
+            <div>ROOMS</div>
+            <div>BOOK NOW!</div>           
+        </nav>
+
+        <div class="hero">
+            <div class="content-container">
+                <h1>H1 Header</h1>
+                <p>{{Hero image and content}}</p>
+          
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="content-container">           
+            
+            <section class="section-placeholder">
+                <div>
+                    <h2>H2 Heading</h2>                  
+                    <p class="content-placeholder">Content</p>                
+                </div>
+                        
+            </section>             
+        </div>
+
+
+     <div class="content-container">           
+           
+            <section class="section-placeholder">
+                 <h2>H2 Heading 2-Column</h2> 
+                 <div class="grid-container-2">
+                     <div class="grid-img">                                    
+                        <p class="content-placeholder">Content/Img</p>     
+                       
+                    </div>
+                    <div>                                    
+                        <p class="content-placeholder">Content</p>                
+                    </div>
+                 </div>
+               
+
+            </section>             
+        </div>
+
+    </main>
+
+    <footer>
+        <nav class="top">
+
+            <div class="main">
+                <ul>
+                    <li class="header">Footer link 1</li>
+                    <li>Footer Link 2</a></li>                 
+                </ul>
+               <ul>
+                    <li class="header">Footer link 3</li>
+                    <li>Footer Link 4</li>                  
+                </ul>
+            </div> 
+
+            <div class="social">
+                <ul >
+                    <li>SOCIAL</li>
+                    <li>SOCIAL</li>
+                    <li>SOCIAL</li>
+                </ul>
+            </div>           
+        </nav>    
+
+        <nav class="bottom">
+            Copyright &copy; 2025  Legal Links 
+     
+        </nav>   
+
+    </footer>
+</body>
+</html>

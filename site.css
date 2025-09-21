@@ -1,0 +1,140 @@
+
+/***  PROJECT IS NOT USING A 3rd Party grid and reset library - going it alone, wish me luck! ***/
+
+/****** general reset of browser default values ******/ 
+
+/* Remove default margins and padding */
+* {  margin: 0;  padding: 0;  box-sizing: border-box; /* Ensures padding/borders are included in element's width/height */}
+
+/* links */
+a {text-decoration:none;color: inherit;}
+a:hover, .btn:hover{text-decoration: underline;}
+
+/*  list styles */
+ol, ul{list-style-type: none;}
+ul.bulleted {list-style-type:circle;margin-left:20px;}  /* <--  20px is neccessary as a mobile-first rule as it keeps the bullets within the page
+
+/* Normalize images */
+img {  max-width: 100%; /* Ensures images are responsive */
+  height: auto;
+  display: block; /* Removes extra space below images */
+}
+/* Normalize form elements */
+button, input, select, textarea {  font-family: inherit;  font-size: 100%;  margin: 0;  border: 0;
+  outline: none; /* Removes default focus outline */
+}
+
+body { background-color: #F5F0E8; color: #262c2c; font-family: Verdana,Arial,sans-serif; line-height: 1.1;}
+
+
+/* for Reference - Color Palette */
+.theme-dark	{color:#262c2c;}
+.theme-pimary	{color:#F5F0E8;}
+.theme-tertiary	{color:#8A9A7A;}
+.theme-secondary {color:#B0C79A;}
+.theme-accent	{color:#4A829F;}
+.theme-excite	{color:#D9866C;}
+.theme-light{color:#FCFBFB;}
+
+/* common elements */
+
+h1, h2, h3{margin-bottom: 10px;}
+h1 {font-size: 1.3em;}
+h2 {font-size: 1.1em;}
+
+.centered {text-align: center;}
+.phone-mobile{ display: inline;}
+.phone-desktop{ display: none;}
+.copyright{ font-style: italic;}
+.desktop, .hide {display: none;}
+
+.btn {cursor:pointer; background-color: #D9866C; color:#193538; border-radius: 5px;padding:5px;}
+.btn a, .btn a:link, .btn a:visited{color:#193538;}   
+.btn:hover, .btn a:hover{color:#A26100;}
+
+.band-primary{background-color: #8A9A7A; color:#F5F0E8;}
+.band-accent{background-color: #4A829F; color:#F5F0E8;}
+.band-excite{background-color: #D9866C; color:#F5F0E8;}
+.band-light{background-color: #FCFBFB; color:#262c2c;}
+.band-dark{background-color: #262c2c; color:#F5F0E8;}
+
+/* Common Structure */ 
+.content-container {margin:auto;}
+.content-container section {padding:5px; }
+
+header nav{ background-color:#4A829F; color:#F5F0E8; text-align:right; position: fixed; top: 0;width: 100%; min-height: 50px; padding:10px 0;} 
+header nav .brand-container{  float:left;  }
+
+header nav ul{ margin-top:7px; display: flex; flex-wrap: wrap; justify-content:space-evenly; align-items: center};
+header nav ul li{  padding: 0 1em; }
+header nav a { padding: 5px 0; }
+
+header nav li.active a {color:#74d9e1; border-bottom: 2px solid #d9cfb600; }
+header nav li.active a:hover {text-decoration:none; }
+
+header .hero {background-repeat: no-repeat; background-size: cover; height: 150px; margin-top:50px; text-align: center; padding-top:20px;}     
+header .band { margin-top:50px; padding-top:20px;} 
+
+footer{background-color:#4A829F; color:#F5F0E8; }
+footer div{margin-bottom: 5px; }
+footer div.main ul{ padding:5px 0 0 20px; border-bottom: 2px solid #F5F0E8;}  
+footer .main ul li { padding:5px;} 
+footer div.main li.header{ font-size:1.2em; margin-bottom:5px; }
+
+footer div.social{ padding:5px 0; } 
+
+footer div.social ul { display:flex; flex-flow: row nowrap; justify-content:center; }
+footer div.social ul li{margin-right: 30px;}
+footer div.social ul li:last-child {margin-right: 0;}
+footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E8; display: flex; flex-wrap: wrap; justify-content:space-evenly; text-align: center;}
+
+/***      Page-specific rules        ***/
+#Home_pg .hero { background-image: url(placeholder_view_vector.svg);}  
+
+
+/***      Progressive Design rules (responsive design)   ***/
+
+ @media (min-width: 768px){ /* medium devices  - tablets, laptops, small desktops */ 
+
+    /* turn off link to use phone*/
+  .phone-mobile{ display: none;}
+  .phone-desktop{display: inline;}
+  
+  h1 {font-size: 1.5em;}
+  h2 {font-size: 1.3em;}
+
+
+  .content-container {margin:auto;padding:10px;}
+  .content-container img{ border-radius: 10px;}  
+  .content-container section {padding:10px; }
+
+  .grid-container-1 {
+      display: grid;    
+      grid-template-columns: 50%  auto; 
+  }
+   /*  .grid-container-1 img{  height:300px; width:auto; } */
+
+  footer div{margin-bottom: 10px;}
+  footer div.main{ display:flex; flex-flow: row nowrap; justify-content:space-around;border-bottom: 2px solid #F5F0E8; padding:10px 0; } 
+  footer div.main ul{border-bottom: 0;}
+  footer div.social ul li{margin-right: 50px;}
+  footer nav.bottom{ padding:10px 0;}
+       
+}
+
+@media (min-width: 1200px){ /* Desktops */    
+    
+  .content-container{ width:80%; margin:auto;}
+  .content-container img{ border-radius: 20px;}
+  .content-container section {padding:20px; }
+
+  .hero .content-container{ margin: 20px auto; }
+  .desktop {display:unset;}
+  .bars {display:none;}
+
+
+  footer div.main{padding:20px 0;}
+  footer div{margin-bottom: 20px;}
+  footer div.social ul li{margin-right: 80px;}
+  footer nav.bottom{ padding:15px 0;}
+}
