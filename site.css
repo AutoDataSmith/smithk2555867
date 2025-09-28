@@ -42,6 +42,9 @@ body { background-color: #F5F0E8; color: #262c2c; font-family: Verdana,Arial,san
 h1, h2, h3{margin-bottom: 10px;}
 h1 {font-size: 1.3em;}
 h2 {font-size: 1.1em;}
+dt{margin-bottom:10px;font-weight: bold;}
+dd{margin:0 0 20px 20px;}
+p {margin-bottom:10px;}
 
 .centered {text-align: center;}
 .phone-mobile{ display: inline;}
@@ -53,16 +56,37 @@ h2 {font-size: 1.1em;}
 .btn a, .btn a:link, .btn a:visited{color:#FCFBFB;}   
 .btn:hover, .btn a:hover{text-decoration:none; color:#d3d3d3;}
 
+.band { padding:10px 0;}
 .band-primary{background-color: #8A9A7A; color:#F5F0E8;}
+    .band-primary a {  text-decoration: underline; }
+    .band-primary a:hover{ color:#d3d3d3;}
+
 .band-accent{background-color: #4A829F; color:#F5F0E8;}
 
 .band-excite{background-color: #D9866C; color:#F5F0E8;}
+    .band-excite a {  text-decoration: underline; }
+    .band-excite a:hover{ color:#d3d3d3;}
+
 .band-light{background-color: #FCFBFB; color:#262c2c;}
+    .band-light a {  color:#4A829F;text-decoration: underline; }
+
 .band-dark{background-color: #262c2c; color:#F5F0E8;}
 
 /* Common Structure */ 
-.content-container {margin:auto;}
+.content-container {margin:auto; padding: 0 5px;}
 .content-container section {padding:5px; }
+
+.card { text-align: center;   border-bottom: 2px solid #4A829F; margin: 10px 0;}
+.card-footer{ margin:5px 0 20px 0; }
+.card-footer a {font-weight: bold;}
+
+  .cta-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        gap: 5px; /* Space between items */  
+        margin: 0 auto; /* Centers the container */
+        text-align: center;
+    }
 
 header .nav-main{
   background-color:#262c2c; color:#F5F0E8; font-weight: bold; text-align:right; padding:5px 0;position: relative;
@@ -206,6 +230,7 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
   h1 {font-size: 1.5em;}
   h2 {font-size: 1.3em;}
 
+  .band {padding:15px 0;}
   .content-container {margin:auto;padding:10px;}
   .content-container img{ border-radius: 10px;}  
   .content-container section {padding:10px; }
@@ -216,31 +241,59 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
       grid-template-columns: 50%  auto; 
   }
 
-   header nav ul { margin-top:5px;}
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        gap: 10px; /* Space between items */  
+        margin: 0 auto; /* Centers the container */
+    }
 
-  footer div{margin-bottom: 10px;}
-  footer div.main{ display:flex; flex-flow: row nowrap; justify-content:space-around;border-bottom: 2px solid #F5F0E8; padding:10px 0; } 
-  footer div.main ul{border-bottom: 0;}
-  footer div.social ul li{margin-right: 50px;}
-  footer nav.bottom{ padding:10px 0;}
+    .card {        
+        border-radius: 10px;;
+        background-color: #FCFBFB;
+        margin: auto;
+        border: none;
+  
+    }
+    .card-footer{ margin:10px 0 0 0; }
+    
+ .cta-container {       
+        gap: 10px; /* Space between items */       
+    }
+
+
+    header nav ul { margin-top:5px;}
+
+    footer div{margin-bottom: 10px;}
+    footer div.main{ display:flex; flex-flow: row nowrap; justify-content:space-around;border-bottom: 2px solid #F5F0E8; padding:10px 0; } 
+    footer div.main ul{border-bottom: 0;}
+    footer div.social ul li{margin-right: 50px;}
+    footer nav.bottom{ padding:10px 0;}
        
 }
 
 @media (min-width: 1200px){ /* Desktops */ 
 
-  .hamb-container{display:none;}
-  .content-container{ width:80%; margin:auto;}
-  .content-container img{ border-radius: 20px;}
-  .content-container section {padding:20px; }
+    .hamb-container{display:none;}
+    .content-container{ width:80%; margin:auto;}
+    .content-container img{ border-radius: 20px;}
+    .content-container section {padding:20px; }
 
-  .hero .content-container{ margin: 20px auto; }
-  .desktop {display:unset;}
-  .bars {display:none;}
-  .btn {border-radius: 15px;padding:10px;}
+    .band { padding:30px 0;}
+    .card-container {  gap: 30px;}
+
+    .cta-container {       
+        gap: 30px; /* Space between items */       
+    }
+
+    .hero .content-container{ margin: 20px auto; }
+    .desktop {display:unset;}
+    .bars {display:none;}
+    .btn {border-radius: 15px;padding:10px;}
 
 
-  footer div.main{padding:20px 0;}
-  footer div{margin-bottom: 20px;}
-  footer div.social ul li{margin-right: 80px;}
-  footer nav.bottom{ padding:15px 0;}
-}
+    footer div.main{padding:20px 0;}
+    footer div{margin-bottom: 20px;}
+    footer div.social ul li{margin-right: 80px;}
+    footer nav.bottom{ padding:15px 0;}
+    }
