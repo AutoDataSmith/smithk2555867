@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d17344da85.js" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </head>
-<body id="Home_pg">
+<body id="Reserve_pg">
    
     <header>
        <nav id="nav-overlay" style="display:none;" >
@@ -45,30 +45,49 @@
         </nav> 
         
         <div class="band band-light">
-            <div class="content-container">
-            
-                <div class="grid-container-1">                        
-                    <section>
-                        <h1>Reserve Now</h1>                                      
-                        <p>Midler’s Lake House is a premier Bed and Breakfast business located on Lake George in the Adirondack region of New York. 
-                            Our meticulously renovated lake-side estate includes a grand main house, charming cottage, and boathouse that are all available for rental.
-                    </section>
-                     <img src="media/main-house.jpg" height="150" alt="Our Main house from a flyover">
-                </div>
+            <div class="content-container">            
+                <h1>Reserve Now</h1>                                      
+                <p>All Rates are upfront and inclusive for our Bed & Breakfast location. Fast and easy to book right now.
+                </p>
+                <p>
+                    We recommend booking early, as our upscale accommodations fill quickly during peak seasons. 
+                    Let Sidney assist you in creating the perfect itinerary tailored to your needs.
+                </p>              
             </div>
-
         </div>
           
       
     </header>
 
     <main>       
-        <div class="band band-light">
-        
+        <div class="band band-light">        
             <div class="content-container centered">
-                <h2>Availabiliy/Calendar</h2>                
-                <p> List of days/weeks available </p> 
-                
+             
+                <h2>Fill Out Form</h2>
+                <form method="get" action="thankyou.html">
+                    
+                    <label for="myName">Name:</label><input type="text" id="myName" name="myName" required>
+
+                    <label for="myEmail">E-mail:</label><input type="email" id="myEmail" name="myEmail" required>
+
+                    <label for="dateFrom">Date From:</label><input type="date" id="dateFrom" name="dateFrom" required>
+                    <label for="dateTo">Date To:</label><input type="date" id="dateTo" name="dateTo" required>
+
+                    <label for="RoomRequest">Select a Suite</label><input type="text" id="RoomRequest" name="RoomRequest"  list="roomsavailable" required>
+                    <datalist id="roomsavailable">
+                        <option value="Lakeview Suite" label="Lakeview Suite">
+                        <option value="Adirondack Family Room" label="Adirondack Family Room">
+                        <option value="Executive Retreat Suite" label="Executive Retreat Suite">
+                        <option value="Blue Room" label="Blue Room">
+                        <option value="Rose Room" label="Rose Room">                       
+                        <option value="Boat House" label="Boat House">                        
+                        <option value="Cottage" label="Cottage">                 
+                    </datalist>
+                    
+                    <label for="myComments">Comments:</label><textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea>
+
+                    <input class="btn" id="mySubmit" type="submit" value="Send Now">
+                </form>
             </div> 
          </div>
     </main>

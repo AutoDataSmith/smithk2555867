@@ -45,6 +45,7 @@ h2 {font-size: 1.1em;}
 dt{margin-bottom:10px;font-weight: bold;}
 dd{margin:0 0 20px 20px;}
 p {margin-bottom:10px;}
+hr {margin:5px 0;}
 
 .centered {text-align: center;}
 .phone-mobile{ display: inline;}
@@ -195,9 +196,10 @@ header .hamb-line {
     top:0;
 }
 
-/* body:has(.side-menu:checked) {
-  overflow: hidden;
-} */
+
+form { display: flex; flex-direction: column; padding-left:1em; width:100%; padding:10px; margin-top:20px;background-color:#B0C79A;}
+input, textarea {margin-bottom: .5em; }
+form input.btn, .btn-strong  { font-weight: bold; font-size: 1.1em;}
 
 footer{background-color:#4A829F; color:#F5F0E8; }
 footer a:hover{text-decoration:none;color:#fff; border-bottom: 2px solid #D9866C;}
@@ -216,7 +218,7 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
 
 /***      Page-specific rules        ***/
 #Home_pg .hero { background-image: url(placeholder_view_vector.svg);}  
-
+#Contactus_pg  ul li{margin-bottom: 10px;}
 
 /***      Progressive Design rules (responsive design)   ***/
 
@@ -227,14 +229,15 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
   .phone-desktop{display: inline;}
   .tablet{display:unset; }
 
-  h1 {font-size: 1.5em;}
-  h2 {font-size: 1.3em;}
+    h1 {font-size: 1.5em;}
+    h2 {font-size: 1.3em;}
+    hr {margin:7px 0;}
 
-  .band {padding:15px 0;}
-  .content-container {margin:auto;padding:10px;}
-  .content-container img{ border-radius: 10px;}  
-  .content-container section {padding:10px; }
-  .btn {border-radius: 10px;padding:10px;}
+    .band {padding:15px 0;}
+    .content-container {margin:auto;padding:10px;}
+    .content-container img{ border-radius: 10px;}  
+    .content-container section {padding:10px; }
+    .btn {border-radius: 10px;padding:10px;}
 
   .grid-container-1 {
       display: grid;    
@@ -274,6 +277,8 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
 
 @media (min-width: 1200px){ /* Desktops */ 
 
+    hr {margin:10px 0;}
+
     .hamb-container{display:none;}
     .content-container{ width:80%; margin:auto;}
     .content-container img{ border-radius: 20px;}
@@ -291,6 +296,16 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
     .bars {display:none;}
     .btn {border-radius: 15px;padding:10px;}
 
+
+      form { display: grid;  
+        grid-template-rows: auto;
+        grid-template-columns: 12em 1fr;
+        grid-gap: 1em; gap: 1em;          /*  grid-gap is an older syntax and gap is the newer one  - add both gap syntax for compatibility */
+        padding:20px;}
+    input[type="submit"] { grid-column: 2 / 3; width: 9em; }  /* grid-column sets the grid beginning line number and ending line number */
+   
+
+    form input.btn  { border-radius: 10px; padding:10px; font-size: 1.2em;}
 
     footer div.main{padding:20px 0;}
     footer div{margin-bottom: 20px;}

@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d17344da85.js" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </head>
-<body id="Home_pg">
+<body id="Contactus_pg">
    
     <header>       
        <nav id="nav-overlay" style="display:none;" >
@@ -44,40 +44,67 @@
             </div>
         </nav> 
         
-        <div class="band band-light">
+        <div class="band">
             <div class="content-container">
-            
-                <div class="grid-container-1">                        
-                    <section>
-                        <h1>Contact Us</h1>                                      
-                        <p>Midler’s Lake House is a premier Bed and Breakfast business located on Lake George in the Adirondack region of New York. 
-                            Our meticulously renovated lake-side estate includes a grand main house, charming cottage, and boathouse that are all available for rental.
-                    </section>
-                    <img src="media/main-house.jpg" height="150" alt="Our Main house from a flyover">                  
-                </div>
+                <h1>Contact Us</h1>                                      
+                <p>We look forward to welcoming you to Midler Lake House. For reservations, inquiries, or to discuss custom packages for family get-togethers, corporate retreats, honeymoons, or anniversaries, please reach out.
+                </p>               
             </div>
-
         </div>          
       
     </header>
 
     <main>       
-        <div class="band band-light">
-        
-            <div class="content-container centered">
-                <h2>History</h2>                
-                <p> This property has been around for a long time</p> 
-                
+        <div class="band band-light">        
+            <div class="content-container">
+                <div class="grid-container-1">                        
+                    <section>                                          
+                        <ul class="bulleted">
+                            <li>
+                                <strong>Property Manager: </strong>Sidney Stevens
+                            </li>
+                            <li>
+                                <strong>Email: </strong>sidney@midlerlakehouse.com
+                            </li>
+                            <li>
+                                <strong>Phone: </strong>(518) 555-6789
+                            </li>
+                            <li>
+                                <strong>Address: </strong>123 Lakeside Point, Lake George, NY 12845
+                            </li>
+                        </ul>
+                        <hr>
+                    </section>
+
+                    <section>
+                        <h2>Fill Out Form</h2>
+                        <form method="get" action="thankyou.html">
+                            
+                            <label for="myName">Name:</label><input type="text" id="myName" name="myName" required>
+
+                            <label for="myEmail">E-mail:</label><input type="email" id="myEmail" name="myEmail" required>
+
+                            <label for="myRefer">How did you hear about us?</label><input type="text" id="myRefer" name="myRefer"  list="referral" required>
+                            <datalist id="referral">
+                                <option value="Google" label="Google">
+                                <option value="Bing" label="Bing">
+                                <option value="Facebook" label="Facebook">
+                                <option value="Friend" label="Friend">
+                                <option value="Radio Ad" label="Radio Ad">                    
+                            </datalist>
+                            
+                            <label for="myComments">Comments:</label><textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea>
+
+                            <input class="btn" id="mySubmit" type="submit" value="Send Now">
+                        </form>
+
+
+                    </section>
+                                   
+                </div>
             </div> 
          </div>
-           <div class="band band-light">
-        
-            <div class="content-container centered">
-                <h2>Restoration</h2>                
-                <p>WA lot of work was put into the place</p> 
-                
-            </div> 
-         </div>
+         
     </main>
 
     <footer>
