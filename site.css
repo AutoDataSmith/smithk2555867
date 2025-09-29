@@ -26,7 +26,6 @@ button, input, select, textarea {  font-family: inherit;  font-size: 100%;  marg
 
 body { background-color: #F5F0E8; color: #262c2c; font-family: Verdana,Arial,sans-serif; line-height: 1.1;}
 
-
 /* for Reference - Color Palette */
 .theme-dark	{color:#262c2c;}
 .theme-pimary	{color:#F5F0E8;}
@@ -81,7 +80,7 @@ hr {margin:5px 0;}
 .card-footer{ margin:5px 0 20px 0; }
 .card-footer a {font-weight: bold;}
 
-  .cta-container {
+.cta-container {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two equal-width columns */
         gap: 5px; /* Space between items */  
@@ -114,51 +113,16 @@ header .nav-main .bars{ float:right;}
 header .hero {background-repeat: no-repeat; background-size: cover; height: 150px; margin-top:50px; text-align: center; padding-top:20px;}     
 header .band { margin-top:50px; padding-top:20px;} 
 
-
 /****  HAMBURGER MENU ****/
-header .hamb-container{
-  position: absolute; Float:right; width:50px; height:50px;top:10px; right:0;
-}
+header .hamb-container{position: absolute; Float:right; width:50px; height:50px;top:10px; right:0;}
 
-header #nav-overlay{       
-    width: 100%;
-    position: absolute;   
-    left:0;  
-    padding-top:10px; 
-    background-color: #262c2c;
-    color: #F5F0E8; 
-    
-}
+header #nav-overlay{  width: 100%; position: absolute;   left:0;   padding-top:10px;  background-color: #262c2c; color: #F5F0E8;}
+header .menu-overlay li { display: block;padding: 5px;  color: #F5F0E8;  }
+header .menu-overlay a {display: block; padding: 10px; }
+header .menu-overlay a:hover{ background-color: #4A829F;}
 
-header .menu-overlay li {
-    display: block;
-    padding: 5px;    
-    color: #F5F0E8;   
-}
-header .menu-overlay a {
-    display: block;
-    padding: 10px;   
-
-}
-header .menu-overlay a:hover{
-    background-color: #4A829F;
-}
-
-header .hamb{
-    cursor: pointer;
-    float: right;
-    padding: 20px 10px;
-}/* Style label tag */
-
-header .hamb-line {
-    background: #fff;    
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-
-} /* Style span tag */
-
+header .hamb{ cursor: pointer; float: right; padding: 20px 10px;}/* Style label tag */
+header .hamb-line { background: #fff; display: block;height: 2px;position: relative;width: 24px;} /* Style span tag */
 .hamb-line::before,
 .hamb-line::after{
     background: #fff;
@@ -169,33 +133,12 @@ header .hamb-line {
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
-    top: 5px;
-}
-.hamb-line::after{
-    top: -5px;
-}
-
-.side-menu {
-    display: none;
-} /* Hide checkbox */
-
-/* Toggle menu icon */
-/* .side-menu:checked ~ .nav-overlay{
-    max-height: 100%;
-} */
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-}
-
+.hamb-line::before{top: 5px;}
+.hamb-line::after{top: -5px;}
+.side-menu {display: none;} /* Hide checkbox */
+.side-menu:checked ~ .hamb .hamb-line {background: transparent;}
+.side-menu:checked ~ .hamb .hamb-line::before {transform: rotate(-45deg);top:0;}
+.side-menu:checked ~ .hamb .hamb-line::after {transform: rotate(45deg); top:0;}
 
 form { display: flex; flex-direction: column; padding-left:1em; width:100%; padding:10px; margin-top:20px;background-color:#B0C79A;}
 input, textarea {margin-bottom: .5em; }
@@ -225,9 +168,9 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
  @media (min-width: 768px){ /* medium devices  - tablets, laptops, small desktops */ 
 
     /* turn off link to use phone*/
-  .phone-mobile{ display: none;}
-  .phone-desktop{display: inline;}
-  .tablet{display:unset; }
+    .phone-mobile{ display: none;}
+    .phone-desktop{display: inline;}
+    .tablet{display:unset; }
 
     h1 {font-size: 1.5em;}
     h2 {font-size: 1.3em;}
@@ -239,10 +182,10 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
     .content-container section {padding:10px; }
     .btn {border-radius: 10px;padding:10px;}
 
-  .grid-container-1 {
-      display: grid;    
-      grid-template-columns: 50%  auto; 
-  }
+    .grid-container-1 {
+        display: grid;    
+        grid-template-columns: 50%  auto; 
+    }
 
     .card-container {
         display: grid;
@@ -259,11 +202,8 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
   
     }
     .card-footer{ margin:10px 0 0 0; }
-    
- .cta-container {       
-        gap: 10px; /* Space between items */       
-    }
-
+        
+    .cta-container {  gap: 10px; /* Space between items */  }
 
     header nav ul { margin-top:5px;}
 
@@ -287,23 +227,19 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
     .band { padding:30px 0;}
     .card-container {  gap: 30px;}
 
-    .cta-container {       
-        gap: 30px; /* Space between items */       
-    }
+    .cta-container {  gap: 30px; /* Space between items */   }
 
     .hero .content-container{ margin: 20px auto; }
     .desktop {display:unset;}
     .bars {display:none;}
     .btn {border-radius: 15px;padding:10px;}
 
-
-      form { display: grid;  
+    form { display: grid;  
         grid-template-rows: auto;
         grid-template-columns: 12em 1fr;
         grid-gap: 1em; gap: 1em;          /*  grid-gap is an older syntax and gap is the newer one  - add both gap syntax for compatibility */
         padding:20px;}
-    input[type="submit"] { grid-column: 2 / 3; width: 9em; }  /* grid-column sets the grid beginning line number and ending line number */
-   
+    input[type="submit"] { grid-column: 2 / 3; width: 9em; }  /* grid-column sets the grid beginning line number and ending line number */  
 
     form input.btn  { border-radius: 10px; padding:10px; font-size: 1.2em;}
 
@@ -311,4 +247,5 @@ footer nav.bottom{ padding:5px 0; font-size: .90em; border-top: 1px solid #F5F0E
     footer div{margin-bottom: 20px;}
     footer div.social ul li{margin-right: 80px;}
     footer nav.bottom{ padding:15px 0;}
-    }
+
+}
